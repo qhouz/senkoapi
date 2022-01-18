@@ -25,3 +25,7 @@ function math.normalize_yaw(yaw)
   
   return yaw
 end
+
+function TIME_TO_TICKS(time)
+  return math.floor(0.5 + time /globals.get_intervalpertick())
+end
