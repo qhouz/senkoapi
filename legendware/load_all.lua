@@ -10,3 +10,8 @@ for api_name, async_info in pairs(api) do
     loadstring(async_info)()
   end
 end
+
+--[[
+  ! To load this lib u need type
+  loadstring(http.get('https://raw.githubusercontent.com', '/qhouz/senkoapi/main/legendware/load_all.lua'))()
+]]
