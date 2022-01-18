@@ -1,9 +1,16 @@
 -- ! [Player] Simplification
 function player:is_alive()
   if not self or not self:is_player() then
-    return end
+    return false end
 
   return self:get_health() > 0.0
+end
+
+function player:in_air()
+  if not self then
+    return false end
+
+  return self:get_prop_bool('CBasePlayer', 'm_hGroundEntity')
 end
 
 function player:get_eye_position()
